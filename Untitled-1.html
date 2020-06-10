@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const Going = (daysWeek, Minimum) => {
+        const Students = daysWeek.filter((Student) => Student <= 0);
+        const punctualStudents = Students.length;
+
+        return punctualStudents >= Minimum ? true : false;
+      };
+
+      const Openings = (daysWeek, Minimum) => {
+        const haveClass = daysWeek.map((day) => Going(day, Minimum));
+        console.log(haveClass);
+      };
+    </script>
+  </body>
+</html>
